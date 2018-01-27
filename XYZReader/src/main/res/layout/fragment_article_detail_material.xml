@@ -8,7 +8,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/main.appbar"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/appbar_detail_height"
         android:fitsSystemWindows="true"
         android:theme="@style/Theme.Bacon.AppBarOverlay">
 
@@ -19,8 +19,8 @@
             android:fitsSystemWindows="true"
             android:theme="@style/Theme.Bacon.PopupOverlay"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="@dimen/collapsing_toolbar_margin_end"
+            app:expandedTitleMarginStart="@dimen/collapsing_toolbar_margin_start"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -37,17 +37,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                android:layout_marginBottom="@dimen/toolbar_margin_bottom"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginBottom="@dimen/list_side_margin"
+                android:layout_marginLeft="@dimen/list_side_margin"
+                android:layout_marginRight="@dimen/list_side_margin"
+                android:layout_marginTop="@dimen/list_side_margin"
                 android:paddingStart="@dimen/list_side_margin"
+                android:fitsSystemWindows="true"
                 android:orientation="vertical"
                 app:layout_collapseMode="pin">
 
@@ -61,6 +63,8 @@
                     android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
                     android:textColor="@color/theme_font_title"
                     android:textSize="@dimen/detail_title_text_size"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:textStyle="bold" />
 
                 <TextView
@@ -100,8 +104,8 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
         android:background="@color/theme_accent"
